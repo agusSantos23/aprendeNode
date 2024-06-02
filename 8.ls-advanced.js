@@ -1,5 +1,6 @@
 const fs = require('node:fs/promises')
 const path = require('node:path')
+const pico = require('picocolors')
 
 
 const folder = process.argv[2] ?? '.'
@@ -28,7 +29,7 @@ async function ls (folder){
         const fileSize = stats.size.toString()
         const fileModified = stats.mtime.toLocaleString()
 
-        return `${fileType} ${file.padEnd(25)} ${fileSize.padStart(10)} ${fileModified}`
+        return `${pico.blue(fileType)} ${pico.cyan(file.padEnd(25))} ${pico.magenta(fileSize.padStart(10))} ${pico.yellow(fileModified)}`
     })
 
     const filesInfo = await Promise.all(filesPromises)

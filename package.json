@@ -1,0 +1,17 @@
+{
+  "name": "aprendenodemidu",
+  "version": "1.0.0",
+  "description": "aprende con midu node.js",
+  "main": "1.os-info.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "picocolors": "^1.0.1"
+  }
+}
