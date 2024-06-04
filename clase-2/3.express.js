@@ -33,7 +33,6 @@ app.get('/',(req,res)=>{
 
     res.json({mesaje: "hola amigo"})
 
-
 })
 
 app.get('/pokemon/ditto', (req,res)=>{
