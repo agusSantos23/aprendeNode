@@ -4,7 +4,6 @@ const crypto  = require('node:crypto')
 const { validacionMovie, validacionPartialMovie } = require('./schemas/movieShemas')
 
 const app = express()
-const port = 3000
 app.disable('x-powered-by')
 
 app.use(express.json())
@@ -92,6 +91,7 @@ app.options('/movies/:id',(req,res)=>{
     res.send()
 })
 
+const port = process.env.PORT ?? 3000
 
 app.listen(port, ()=>{
     console.log(`El servidor esta en el http://localhost:${port}`);
